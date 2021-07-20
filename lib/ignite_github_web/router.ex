@@ -7,6 +7,8 @@ defmodule IgniteGithubWeb.Router do
 
   scope "/api", IgniteGithubWeb do
     pipe_through :api
+
+    get "/github/repos/:username", GithubController, :show
   end
 
   # Enables LiveDashboard only for development
